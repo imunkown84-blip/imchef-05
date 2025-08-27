@@ -11,10 +11,10 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S&N</span>
+                <span className="text-white font-bold text-lg">IC</span>
               </div>
               <span className="font-heading font-bold text-xl text-foreground">
-                Spice & Noodle
+                ImChef
               </span>
             </div>
             <p className="text-muted-foreground text-sm">
@@ -111,7 +111,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © 2024 Spice & Noodle. All rights reserved.
+              © 2024 ImChef. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
