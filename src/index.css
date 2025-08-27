@@ -89,15 +89,48 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: none; /* Hide default cursor */
   }
 
   body {
     @apply bg-background text-foreground font-body;
     font-feature-settings: "rlig" 1, "calt" 1;
+    cursor: none; /* Hide default cursor on body */
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+
+  /* Custom black dot cursor */
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-out;
+  }
+
+  /* Larger dot on hover over interactive elements */
+  .cursor-dot.hover {
+    width: 16px;
+    height: 16px;
+    background-color: #000;
+    opacity: 0.8;
+  }
+
+  /* Even larger dot for buttons */
+  .cursor-dot.button-hover {
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    opacity: 0.6;
   }
 }
 
