@@ -18,10 +18,10 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S&N</span>
+              <span className="text-white font-bold text-lg">IC</span>
             </div>
             <span className="font-heading font-bold text-xl text-foreground">
-              Spice & Noodle
+              ImChef
             </span>
           </Link>
 

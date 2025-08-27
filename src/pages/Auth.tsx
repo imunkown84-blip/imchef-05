@@ -52,7 +52,7 @@ const Auth = () => {
         <Card className="w-full">
           <CardHeader className="text-center space-y-4">
             <div className="mx-auto w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">S&N</span>
+              <span className="text-white font-bold text-2xl">IC</span>
             </div>
             <div>
               <CardTitle className="text-2xl font-heading">
