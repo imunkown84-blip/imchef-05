@@ -18,11 +18,16 @@ const Shop = () => {
   const [selectedSpiceLevel, setSelectedSpiceLevel] = useState<string>('all');
 
   const filteredAndSortedProducts = useMemo(() => {
+    console.log('Filtering products with searchTerm:', searchTerm);
+    console.log('Total products:', sampleProducts.length);
+    
     let filtered = sampleProducts.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            product.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
       const matchesSpiceLevel = selectedSpiceLevel === 'all' || product.spiceLevel === selectedSpiceLevel;
+      
+      console.log(`Product "${product.name}": search=${matchesSearch}, category=${matchesCategory}, spice=${matchesSpiceLevel}`);
       
       return matchesSearch && matchesCategory && matchesSpiceLevel;
     });
@@ -88,7 +93,10 @@ const Shop = () => {
                     type="text"
                     placeholder="Search products..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={(e) => {
+                      console.log('Search input changed:', e.target.value);
+                      setSearchTerm(e.target.value);
+                    }}
                     className="pl-10"
                   />
                 </div>
