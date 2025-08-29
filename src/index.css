@@ -89,13 +89,22 @@
 @layer base {
   * {
     @apply border-border;
-    cursor: none; /* Hide default cursor */
   }
 
   body {
     @apply bg-background text-foreground font-body;
     font-feature-settings: "rlig" 1, "calt" 1;
-    cursor: none; /* Hide default cursor on body */
+  }
+
+  /* Hide default cursor only on desktop */
+  @media (hover: hover) and (pointer: fine) {
+    * {
+      cursor: none !important;
+    }
+    
+    body {
+      cursor: none !important;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

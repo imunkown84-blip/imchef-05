@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const CustomCursor = () => {
+  const isMobile = useIsMobile();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [isButtonHover, setIsButtonHover] = useState(false);
+
+  // Don't render custom cursor on mobile devices
+  if (isMobile) {
+    return null;
+  }
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
